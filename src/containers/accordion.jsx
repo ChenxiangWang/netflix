@@ -6,7 +6,7 @@ import OptForm from "../components/opt-form";
 function AccordionContainer(props) {
   return (
     <Accordion>
-      <Accordion.Title>Frequently Asked Questino</Accordion.Title>
+      <Accordion.Title>Frequently Asked Questions</Accordion.Title>
       {faqsData.map((item) => {
         return (
           <Accordion.Item key={item.id}>
@@ -21,7 +21,7 @@ function AccordionContainer(props) {
         <OptForm.Button>Try It Now</OptForm.Button>
         <OptForm.Break />
         <OptForm.Text>
-          Ready to watch? Enter your email to create or restart your membership
+          Ready to watch? Enter your email to create or restart your membership.
         </OptForm.Text>
       </OptForm>
     </Accordion>
