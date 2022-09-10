@@ -1,5 +1,6 @@
 import React from "react";
 import { Inner, Container, Title, SubTitle, Pane, Image, Item } from "./styles";
+
 export default function Jumbotron({
   direction = "row",
   children,
