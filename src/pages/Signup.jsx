@@ -29,7 +29,7 @@ export default function SignUp() {
         result.user
           .updateProfile({
             displayName: firstName,
-            photesURL: Math.floor(Math.random() * 5) + 1,
+            photoURL: Math.floor(Math.random() * 5) + 1,
           })
           .then(() => {
             navigate(ROUTES.BROWSE);
