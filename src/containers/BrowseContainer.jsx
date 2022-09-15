@@ -4,14 +4,17 @@ import { FirebaseContext } from "../context/firebase";
 import Loading from "../components/loading";
 import Header from "../components/header";
 import logo from "../logo.svg";
+import Card from "../components/card";
 import * as ROUTES from "../constants/routers";
 
 export default function BrowseContainer({ slides }) {
+  const [category, setCategory] = useState("series");
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
+  const slideRows = slides[category];
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,8 +30,18 @@ export default function BrowseContainer({ slides }) {
           {/* left side of the frame bar: include logo and a nav for "filems and series" */}
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-            <Header.TextLink>Series</Header.TextLink>
-            <Header.TextLink>Films</Header.TextLink>
+            <Header.TextLink
+              active={category === "series" ? true : false}
+              onClick={() => setCategory("series")}
+            >
+              Series
+            </Header.TextLink>
+            <Header.TextLink
+              active={category === "films" ? true : false}
+              onClick={() => setCategory("films")}
+            >
+              Films
+            </Header.TextLink>
           </Header.Group>
           {/* right right of the bar*/}
           <Header.Group>
@@ -72,8 +85,29 @@ export default function BrowseContainer({ slides }) {
             he projects in a futile attempt to feel like he's part of the world
             around him.
           </Header.Text>
+          <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
+
+      <Card.Group>
+        {slideRows.map((slideItem) => {
+          return !slideItem.data.lenghth &&
+            slideItem.data.length === 0 ? null : (
+            <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
+              <Card.Title>{slideItem.title}</Card.Title>
+              <Card.Entities>
+                {slideItem.data.map((item) => (
+                  <Card.Item key={item.docId}>
+                    <Card.Image
+                      src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
+                    />
+                  </Card.Item>
+                ))}
+              </Card.Entities>
+            </Card>
+          );
+        })}
+      </Card.Group>
     </>
   ) : (
     <ProfileContainer user={user} setProfile={setProfile} />
