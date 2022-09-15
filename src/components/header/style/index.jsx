@@ -99,7 +99,7 @@ export const Link = styled.a`
   color: #fff;
   text-decoration: none;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active === "true" ? "700" : "normal")};
+  font-weight: ${({ active }) => (active === true ? "700" : "normal")};
   cursor: pointer;
 
   &:hover {
@@ -216,5 +216,24 @@ export const SearchIcon = styled.button`
   img {
     filter: brightness(0) invert(1);
     width: 16px;
+  }
+`;
+
+export const PlayButton = styled.button`
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+  background-color: #e6e6e6;
+  color: #000;
+  border-width: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  max-width: 130px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: #ff1e1e;
+    color: white;
   }
 `;
