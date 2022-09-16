@@ -119,6 +119,7 @@ export const FeatureText = styled.p`
   @media (max-width: 600px) {
     line-height: 22px;
   }
+  text-transform: capitalize;
 `;
 
 export const Feature = styled.div`
