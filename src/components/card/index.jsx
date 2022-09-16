@@ -19,12 +19,13 @@ import {
 export const FeatureContext = createContext();
 
 /**
- *  what we want:
- *
- *  card could be controlled by itself
- *  once it is put into a 'group'
- *  it will be controlled by that group
- *
+ *      ======Card=================
+ *      =        <Title />        =
+ *      =    ---<Entities/>----   =
+ *      =    |   [<Item/ >]   |   =
+ *      =    ------------------   =
+ *      =       <Feature />       =
+ *      ===========================
  * */
 
 export default function Card({ children, onClick, ...restProps }) {
@@ -60,13 +61,17 @@ Card.Meta = function ({ children, ...restProps }) {
   return <Meta {...restProps}>{children}</Meta>;
 };
 
+Card.Text = function ({ children, ...restProps }) {
+  return <Text {...restProps}>{children}</Text>;
+};
+
 Card.Item = function CardItem({ children, item, ...restProps }) {
-  const { setShowFeatured, setItemFeature } = useContext(FeatureContext);
+  const { setShowFeature, setItemFeature } = useContext(FeatureContext);
   return (
     <Item
       onClick={() => {
         setItemFeature(item);
-        setShowFeatured(true);
+        setShowFeature(true);
       }}
       {...restProps}
     >
@@ -81,4 +86,33 @@ Card.Image = function ({ children, ...restProps }) {
 
 Card.Entities = function ({ children, entities, ...restProps }) {
   return <Entities {...restProps}>{children}</Entities>;
+};
+
+Card.Feature = function CardFeature({ children, category, ...restProps }) {
+  const { setShowFeature, itemFeature, showFeature } =
+    useContext(FeatureContext);
+
+  console.log(category, itemFeature);
+  return showFeature ? (
+    <Feature
+      {...restProps}
+      src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
+    >
+      <Content>
+        <FeatureTitle>{itemFeature.title}</FeatureTitle>
+        <FeatureText>{itemFeature.description}</FeatureText>
+        <FeatureClose onClick={() => setShowFeature(false)}>
+          <img src="/images/icons/close.png" alt="Close" />
+        </FeatureClose>
+
+        <Group margin="30px 0" flexDirection="row" alignItems="center">
+          <Maturity rating={itemFeature.maturity}>
+            {itemFeature.maturity < 12 ? "PG" : itemFeature.maturity}
+          </Maturity>
+          <FeatureText fontWeight="blod">{itemFeature.title}</FeatureText>
+        </Group>
+        {children}
+      </Content>
+    </Feature>
+  ) : null;
 };
