@@ -91,8 +91,6 @@ Card.Entities = function ({ children, entities, ...restProps }) {
 Card.Feature = function CardFeature({ children, category, ...restProps }) {
   const { setShowFeature, itemFeature, showFeature } =
     useContext(FeatureContext);
-
-  console.log(category, itemFeature);
   return showFeature ? (
     <Feature
       {...restProps}
