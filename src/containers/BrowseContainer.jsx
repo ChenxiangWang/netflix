@@ -5,6 +5,7 @@ import Loading from "../components/loading";
 import Header from "../components/header";
 import logo from "../logo.svg";
 import Card from "../components/card";
+import Player from "../components/player";
 import * as ROUTES from "../constants/routers";
 
 export default function BrowseContainer({ slides }) {
@@ -115,7 +116,10 @@ export default function BrowseContainer({ slides }) {
                   <Player.Button />
                   <Player.Video src={"/videos/bunny.mp4"} />
                 </Player> */}
-                <p>Hi, this player</p>
+                <Player>
+                  <Player.Button />
+                  <Player.Video src={"/videos/bunny.mp4"} />
+                </Player>
               </Card.Feature>
             </Card>
           );
