@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> test card's click function 1`] = `
+<div
+  class="style__Group-sc-vuwtvm-2 eIsdkt"
+>
+  <div
+    class="style__Container-sc-vuwtvm-1 icJcmq"
+  >
+    <p
+      class="style__Title-sc-vuwtvm-0 eWTpGe"
+    >
+      Comedies
+    </p>
+    <div
+      class="style__Entities-sc-vuwtvm-5 gyyxsV"
+    >
+      <div
+        class="style__Item-sc-vuwtvm-8 faMJBz"
+        data-testid="trigger"
+      >
+        <img
+          class="style__Image-sc-vuwtvm-7 bjXbkp"
+          src="/images/series/comedies/the-office/small.jpg"
+        />
+        <div
+          class="style__Meta-sc-vuwtvm-6 YqkBR"
+          data-testid="meta"
+        >
+          <p
+            class="style__SubTitle-sc-vuwtvm-3 kUjijK"
+          >
+            The Office
+          </p>
+          <p
+            class="style__Text-sc-vuwtvm-4 hiAxVH"
+          >
+            A motley group of office workers go through hilarious misadventures at the Scranton, Pennsylvania, branch of the Dunder Mifflin Paper Company.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="style__Feature-sc-vuwtvm-10 cjhxbR"
+      data-testid="feature"
+      src="/images/series/comedies/the-office/large.jpg"
+    >
+      <div
+        class="style__Content-sc-vuwtvm-13 rqYEY"
+      >
+        <p
+          class="style__Title-sc-vuwtvm-0 style__FeatureTitle-sc-vuwtvm-11 eWTpGe hJLsIY"
+        >
+          The Office
+        </p>
+        <p
+          class="style__FeatureText-sc-vuwtvm-9 kZOGwR"
+        >
+          A motley group of office workers go through hilarious misadventures at the Scranton, Pennsylvania, branch of the Dunder Mifflin Paper Company.
+        </p>
+        <button
+          class="style__FeatureClose-sc-vuwtvm-12 einrHM"
+        >
+          <img
+            alt="Close"
+            src="/images/icons/close.png"
+          />
+        </button>
+        <div
+          class="style__Group-sc-vuwtvm-2 gOiYXR"
+        >
+          <div
+            class="style__Maturity-sc-vuwtvm-14 cMcAEG"
+          >
+            15
+          </div>
+          <p
+            class="style__FeatureText-sc-vuwtvm-9 kZOGwR"
+            font-weight="blod"
+          >
+            The Office
+          </p>
+        </div>
+        <div
+          class="style__Container-sc-1wkdspn-0"
+        >
+          <button
+            class="style__Button-sc-1wkdspn-4 fYiLbt"
+          >
+            Play
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> test card's text 1`] = `
+<div
+  class="style__Group-sc-vuwtvm-2 eIsdkt"
+>
+  <div
+    class="style__Container-sc-vuwtvm-1 icJcmq"
+  >
+    <p
+      class="style__Title-sc-vuwtvm-0 eWTpGe"
+    >
+      Comedies
+    </p>
+    <div
+      class="style__Entities-sc-vuwtvm-5 gyyxsV"
+    >
+      <div
+        class="style__Item-sc-vuwtvm-8 faMJBz"
+        data-testid="trigger"
+      >
+        <img
+          class="style__Image-sc-vuwtvm-7 bjXbkp"
+          src="/images/series/comedies/the-office/small.jpg"
+        />
+        <div
+          class="style__Meta-sc-vuwtvm-6 YqkBR"
+          data-testid="meta"
+        >
+          <p
+            class="style__SubTitle-sc-vuwtvm-3 kUjijK"
+          >
+            The Office
+          </p>
+          <p
+            class="style__Text-sc-vuwtvm-4 hiAxVH"
+          >
+            A motley group of office workers go through hilarious misadventures at the Scranton, Pennsylvania, branch of the Dunder Mifflin Paper Company.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
