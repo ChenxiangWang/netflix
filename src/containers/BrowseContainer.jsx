@@ -17,12 +17,15 @@ export default function BrowseContainer({ slides }) {
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
   const [slideRows, setSlideRows] = useState(slides[category]);
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
   }, [profile.displayName]);
+
+  useEffect(() => {
+    setSlideRows(slides[category]);
+  }, [slides, category]);
 
   useEffect(() => {
     const fuse = new Fuse(slideRows, {
