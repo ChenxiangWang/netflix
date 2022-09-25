@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion> render <Accordion> 1`] = `
+<div
+  class="style__Container-sc-188x0cs-0 fIUgdX"
+>
+  <div
+    class="style__Inner-sc-188x0cs-1 kjINHE"
+  >
+    <h1
+      class="style__Title-sc-188x0cs-2 gOOTZl"
+    >
+      title
+    </h1>
+    <div
+      class="style__Item-sc-188x0cs-3 GjnSX"
+    >
+      <div
+        class="style__Header-sc-188x0cs-4 jdrWa-D"
+        data-testid="clickable"
+      >
+        header
+        <img
+          alt="Open"
+          src="/images/icons/add.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
