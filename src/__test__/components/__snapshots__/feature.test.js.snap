@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Feature/> Test Render test 1`] = `
+<div
+  class="style__Container-sc-n1qvws-0 bkxYDa"
+>
+  <h1
+    class="style__Title-sc-n1qvws-1 iSAhNJ"
+  >
+    test-tittle
+  </h1>
+  <h2
+    class="style__SubTitle-sc-n1qvws-2 jhNzDN"
+  >
+    test-subtitle
+  </h2>
+</div>
+`;
